@@ -36,7 +36,7 @@ cd meu-projeto-php
 
 Crie o diretório que será mapeado para o servidor web:
 
-mkdir -p /home/coimbra/php
+Ex: mkdir -p /home/php
 
 4️⃣ Subir os containers
 
