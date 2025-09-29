@@ -41,7 +41,7 @@ services:
     volumes:
       - ./.docker/mysql/dbdata:/var/lib/mysql
     ports:
-      - "3307:3306"
+      - "3308:3306"
     networks:
       - setup-network
 
@@ -51,7 +51,7 @@ services:
     image: phpmyadmin:5.2
     restart: always
     ports:
-      - "8181:80"
+      - "8282:80"
     environment:
       PMA_HOST: setup-mysql-basico
     depends_on:
