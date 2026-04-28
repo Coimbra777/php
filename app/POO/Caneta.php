@@ -2,14 +2,13 @@
 
 class Caneta
 {
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
-    var $status;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
 
-    function rabiscar()
+    public function rabiscar()
     {
         if ($this->tampada == true) {
             echo "Não posso rabiscar";
@@ -18,12 +17,12 @@ class Caneta
         }
     }
 
-    function tampar()
+    private function tampar()
     {
         $this->tampada = true;
     }
 
-    function destampar()
+    private function destampar()
     {
         $this->tampada = false;
     }
