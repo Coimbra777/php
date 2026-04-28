@@ -8,6 +8,16 @@ class Caneta
     protected $carga;
     protected $tampada;
 
+    public function setPonta($ponta)
+    {
+        $this->ponta = $ponta;
+    }
+
+    public function getPonta()
+    {
+        return $this->ponta;
+    }
+
     public function rabiscar()
     {
         if ($this->tampada == true) {
