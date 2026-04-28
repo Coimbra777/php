@@ -1,6 +1,6 @@
 <?php
-// $nome = "Gabriel";
-// echo "Olá {$nome}123";
+$nome = "Gabriel";
+echo "Olá {$nome}123";
 
 // echo "<br>";
 
@@ -31,47 +31,47 @@
 
 // echo soma(5.7, 2);
 
-$a = [];
-$a["01"] = "A";
-$a[1] = "B";
+// $a = [];
+// $a["01"] = "A";
+// $a[1] = "B";
 
-var_dump($a);
+// var_dump($a);
 
-echo "<br>";
+// echo "<br>";
 
-var_dump(array_keys(["3" => "x"]));
+// var_dump(array_keys(["3" => "x"]));
 
-echo "<br>";
-$a = [];
-$a["1"] = "A";
-$a[1] = "B";
+// echo "<br>";
+// $a = [];
+// $a["1"] = "A";
+// $a[1] = "B";
 
-var_dump($a);
+// var_dump($a);
 
-echo "<br>";
+// echo "<br>";
 
-$a = [];
-$a[true] = "A";
-$a[1] = "B";
-$a[false] = "C";
-$a[0] = "D";
+// $a = [];
+// $a[true] = "A";
+// $a[1] = "B";
+// $a[false] = "C";
+// $a[0] = "D";
 
-var_dump($a);
+// var_dump($a);
 
-echo "<br>";
+// echo "<br>";
 
-$a = [];
-$a[] = "A";
-$a[2] = "B";
-$a[] = "C";
+// $a = [];
+// $a[] = "A";
+// $a[2] = "B";
+// $a[] = "C";
 
-var_dump($a);
+// var_dump($a);
 
-echo "<br>";
+// echo "<br>";
 
-$a = [5 => "A"];
-$a[] = "B";
-$a[1] = "C";
-$a[] = "D";
+// $a = [5 => "A"];
+// $a[] = "B";
+// $a[1] = "C";
+// $a[] = "D";
 
-var_dump($a);
+// var_dump($a);
