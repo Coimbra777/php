@@ -24,10 +24,9 @@
         $lutadores[4] = new Lutador("UFOCobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
         $lutadores[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 
-        $lutas = array();
-        $lutas[0] = new Luta();
-        $lutas[0]->marcarLuta($lutadores[0], $lutadores[1]);
-        $lutas[0]->lutar();
+        $lutas = new Luta();
+        $lutas->marcarLuta($lutadores[0], $lutadores[0]);
+        $lutas->lutar();
 
         ?>
     </pre>

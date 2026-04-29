@@ -98,7 +98,6 @@ class Luta
                     break;
             }
         } else {
-            echo "Luta não aprovada";
             return false;
         }
     }
