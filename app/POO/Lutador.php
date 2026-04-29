@@ -22,6 +22,14 @@ class Lutador
         int $derrotas,
         int $empates
     ) {
+        $this->setNome($nome);
+        $this->setNacionalidade($nacionalidade);
+        $this->setIdade($idade);
+        $this->setAltura($altura);
+        $this->setPeso($peso);
+        $this->setVitorias($vitorias);
+        $this->setDerrotas($derrotas);
+        $this->setEmpates($empates);
         $this->nome = $nome;
         $this->nacionalidade = $nacionalidade;
         $this->idade = $idade;
@@ -115,6 +123,7 @@ class Lutador
 
     public function getCategoria()
     {
+        $this->setCategoria($this->peso);
         return $this->categoria;
     }
 
@@ -137,27 +146,17 @@ class Lutador
 
     public function apresentar()
     {
-        echo "Lutador: {$this->getNome()}";
-        echo "Nacionalidade: {$this->getNacionalidade()}";
-        echo "Idade: {$this->getIdade()}";
-        echo "Altura: {$this->getAltura()}";
-        echo "Peso: {$this->getPeso()}";
-        echo "Vitorias: {$this->getVitorias()}";
-        echo "Derrotas: {$this->getDerrotas()}";
-        echo "Empates: {$this->getEmpates()}";
+        echo "<pre>";
+        echo "Lutador: {$this->getNome()} / Categoria: {$this->getCategoria()} / Nacionalidade: {$this->getNacionalidade()} / Idade: {$this->getIdade()} / Altura: {$this->getAltura()} / Peso: {$this->getPeso()} / Vitorias: {$this->getVitorias()} / Derrotas: {$this->getDerrotas()} / Empates: {$this->getEmpates()}";
+        echo "</pre>";
         echo "<br>";
     }
 
     public function status()
     {
-        echo "Lutador: {$this->getNome()}";
-        echo "Nacionalidade: {$this->getNacionalidade()}";
-        echo "Idade: {$this->getIdade()}";
-        echo "Altura: {$this->getAltura()}";
-        echo "Peso: {$this->getPeso()}";
-        echo "Vitorias: {$this->getVitorias()}";
-        echo "Derrotas: {$this->getDerrotas()}";
-        echo "Empates: {$this->getEmpates()}";
+        echo "<pre>";
+        echo "Lutador: {$this->getNome()} / Categoria: {$this->getCategoria()} / Nacionalidade: {$this->getNacionalidade()} / Idade: {$this->getIdade()} / Altura: {$this->getAltura()} / Peso: {$this->getPeso()} / Vitorias: {$this->getVitorias()} / Derrotas: {$this->getDerrotas()} / Empates: {$this->getEmpates()}";
+        echo "</pre>";
         echo "<br>";
     }
 
