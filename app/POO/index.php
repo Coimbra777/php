@@ -12,19 +12,8 @@
         <h1>Controle Remoto</h1>
 
         <?php
-        require_once "ControleRemoto.php";
-        $c = new ControleRemoto();
-        $c->ligar();
-        $c->abrirMenu();
+        require_once "Lutador.php";
 
-        // $c->fecharMenu();
-        // $c->maisVolume();
-        // $c->menosVolume();
-        // $c->ligarMudo();
-        // $c->desligarMudo();
-
-        echo "<br>";
-        print_r($c);
         ?>
     </pre>
 </body>
