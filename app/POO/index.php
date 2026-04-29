@@ -9,25 +9,33 @@
 
 <body>
     <pre>
-        <h1>Lutadores</h1>
+        <h1>Livros</h1>
 
         <?php
-        require_once "Lutador.php";
-        require_once "Luta.php";
+        require_once "Livro.php";
+        require_once "Pessoa.php";
 
-        $lutadores = array();
+        $p1 = new Pessoa("Gabriel", 20, "M");
+        $p2 = new Pessoa("João", 22, "M");
+        $l1 = new Livro("PHP", "Gabriel", 300, $p1);
+        $l2 = new Livro("Java", "João", 200, $p2);
 
-        $lutadores[0] = new Lutador("Pretty Boy", "França", 31, 1.75, 68.9, 11, 2, 1);
-        $lutadores[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
-        $lutadores[2] = new Lutador("Snapshadow", "EUA", 35, 1.65, 80.9, 12, 2, 1);
-        $lutadores[3] = new Lutador("Dead Code", "Austrália", 28, 1.93, 81.6, 13, 0, 2);
-        $lutadores[4] = new Lutador("UFOCobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
-        $lutadores[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
+        echo "<br>";
+        echo $l1->detalhes();
+        echo "<br>";
+        echo "<br>";
+        echo $l2->detalhes();
+        echo "<br>";
+        $l1->abrir();
+        $l1->folhear(100);
+        echo "<br>";
+        echo $l1->detalhes();
+        $l2->abrir();
+        $l2->folhear(50);
+        echo "<br>";
+        echo "<br>";
 
-        $lutas = new Luta();
-        $lutas->marcarLuta($lutadores[0], $lutadores[0]);
-        $lutas->lutar();
-
+        echo $l2->detalhes();
         ?>
     </pre>
 </body>
