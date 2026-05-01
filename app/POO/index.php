@@ -12,31 +12,39 @@
         <h1>Livros</h1>
 
         <?php
-        require_once "Livro.php";
         require_once "Pessoa.php";
+        require_once "Funcionario.php";
+        require_once "Professor.php";
+        require_once "Aluno.php";
 
-        $p1 = new Pessoa("Gabriel", 20, "M");
-        $p2 = new Pessoa("João", 22, "M");
-        $l1 = new Livro("PHP", "Gabriel", 300, $p1);
-        $l2 = new Livro("Java", "João", 200, $p2);
+        $p1 = new Pessoa();
+        $p2 = new Aluno();
+        $p3 = new Professor();
+        $p4 = new Funcionario();
 
-        echo "<br>";
-        echo $l1->detalhes();
-        echo "<br>";
-        echo "<br>";
-        echo $l2->detalhes();
-        echo "<br>";
-        $l1->abrir();
-        $l1->folhear(100);
-        echo "<br>";
-        echo $l1->detalhes();
-        $l2->abrir();
-        $l2->folhear(50);
-        echo "<br>";
+        $p1->setNome("Gabriel");
+        $p2->setNome("João");
+        $p3->setNome("Maria");
+        $p4->setNome("Pedro");
+
+        print_r($p1);
+        print_r($p2);
+        print_r($p3);
+        print_r($p4);
         echo "<br>";
 
-        echo $l2->detalhes();
+        $p1->fazerAniversario(20);
+        $p2->fazerAniversario(21);
+        $p3->fazerAniversario(22);
+        $p4->fazerAniversario(23);
+
+        print_r($p1);
+        print_r($p2);
+        print_r($p3);
+        print_r($p4);
+
         ?>
+
     </pre>
 </body>
 

@@ -6,45 +6,40 @@ class Pessoa
     private int $idade;
     private string $sexo;
 
-    public function __construct(string $nome, int $idade, string $sexo)
+    public function fazerAniversario(int $idade): void
     {
-        $this->nome = $nome;
         $this->idade = $idade;
-        $this->sexo = $sexo;
+        echo "Feliz aniversário! Você agora tem {$this->idade} anos.";
+        echo "<br>";
     }
 
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
 
-    public function getIdade()
+    public function getIdade(): int
     {
         return $this->idade;
     }
 
-    public function getSexo()
+    public function getSexo(): string
     {
         return $this->sexo;
     }
 
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
 
-    public function setIdade(int $idade)
+    public function setIdade(int $idade): void
     {
         $this->idade = $idade;
     }
 
-    public function setSexo(string $sexo)
+    public function setSexo(string $sexo): void
     {
         $this->sexo = $sexo;
-    }
-
-    public function fazerAniversario()
-    {
-        $this->idade++;
     }
 }
