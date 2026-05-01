@@ -22,7 +22,7 @@ class Mamifero extends Animal
         echo "Mamando";
     }
 
-    public function getCorPelo($corPelo): void
+    public function getCorPelo(string $corPelo): void
     {
         echo "Cor do pelo: {$corPelo}";
     }
