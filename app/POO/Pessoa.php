@@ -1,18 +1,20 @@
 <?php
 
-class Pessoa
+abstract class Pessoa
 {
-    private string $nome;
-    private int $idade;
-    private string $sexo;
 
-    public function fazerAniversario(int $idade): void
+    // Atributos
+    protected string $nome;
+    protected int $idade;
+    protected string $sexo;
+
+    // Métodos
+    public final function fazerAniversario(): void
     {
-        $this->idade = $idade;
-        echo "Feliz aniversário! Você agora tem {$this->idade} anos.";
-        echo "<br>";
+        $this->idade++;
     }
 
+    // Getters e Setters
     public function getNome(): string
     {
         return $this->nome;

@@ -7,19 +7,10 @@ class Aluno extends Pessoa
     private string $matricula;
     private string $curso;
 
-    public function criarMatricula(): void
+    public function pagarMensalidade(): void
     {
-        $this->matricula = "2026" . rand(10000000, 99999999);
-    }
-
-    public function getCurso(): string
-    {
-        return $this->curso;
-    }
-
-    public function setCurso(string $curso): void
-    {
-        $this->curso = $curso;
+        echo "Mensalidade paga com sucesso para o aluno: {$this->nome}";
+        echo "</br>";
     }
 
     public function getMatricula(): string
@@ -30,5 +21,15 @@ class Aluno extends Pessoa
     public function setMatricula(string $matricula): void
     {
         $this->matricula = $matricula;
+    }
+
+    public function getCurso(): string
+    {
+        return $this->curso;
+    }
+
+    public function setCurso(string $curso): void
+    {
+        $this->curso = $curso;
     }
 }

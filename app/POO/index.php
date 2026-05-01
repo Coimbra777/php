@@ -9,40 +9,40 @@
 
 <body>
     <pre>
-        <h1>Livros</h1>
+        <h1>Herança</h1>
 
         <?php
+
         require_once "Pessoa.php";
-        require_once "Funcionario.php";
-        require_once "Professor.php";
+        require_once "Visitante.php";
         require_once "Aluno.php";
+        require_once "Bolsista.php";
+        // $p1 = new Pessoa();
+        $v1 = new Visitante();
 
-        $p1 = new Pessoa();
-        $p2 = new Aluno();
-        $p3 = new Professor();
-        $p4 = new Funcionario();
+        $v1->setNome("Gabriel");
+        $v1->setIdade(20);
+        $v1->setSexo("M");
 
-        $p1->setNome("Gabriel");
-        $p2->setNome("João");
-        $p3->setNome("Maria");
-        $p4->setNome("Pedro");
+        $a1 = new Aluno();
+        $a1->setNome("João");
+        $a1->setIdade(20);
+        $a1->setSexo("M");
+        $a1->setMatricula("123456");
+        $a1->setCurso("PHP");
+        $a1->pagarMensalidade();
 
-        print_r($p1);
-        print_r($p2);
-        print_r($p3);
-        print_r($p4);
-        echo "<br>";
+        print_r($a1);
 
-        $p1->fazerAniversario(20);
-        $p2->fazerAniversario(21);
-        $p3->fazerAniversario(22);
-        $p4->fazerAniversario(23);
-
-        print_r($p1);
-        print_r($p2);
-        print_r($p3);
-        print_r($p4);
-
+        $b1 = new Bolsista();
+        $b1->setNome("Maria");
+        $b1->setIdade(20);
+        $b1->setSexo("F");
+        $b1->setMatricula("123456");
+        $b1->setCurso("PHP");
+        $b1->setBolsa(50);
+        $b1->pagarMensalidade();
+        print_r($b1);
         ?>
 
     </pre>

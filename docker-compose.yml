@@ -29,35 +29,35 @@ services:
       - setup-network
 
   #mysql
-  mysql:
-    container_name: setup-mysql-basico
-    image: mysql:8.0
-    environment:
-      MYSQL_DATABASE: database
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: root
-      MYSQL_USER: root
-      MYSQL_ROOT_HOST: "%"
-    volumes:
-      - ./.docker/mysql/dbdata:/var/lib/mysql
-    ports:
-      - "3308:3306"
-    networks:
-      - setup-network
+  # mysql:
+  #   container_name: setup-mysql-basico
+  #   image: mysql:8.0
+  #   environment:
+  #     MYSQL_DATABASE: database
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_PASSWORD: root
+  #     MYSQL_USER: root
+  #     MYSQL_ROOT_HOST: "%"
+  #   volumes:
+  #     - ./.docker/mysql/dbdata:/var/lib/mysql
+  #   ports:
+  #     - "3308:3306"
+  #   networks:
+  #     - setup-network
 
   #phpmyadmin
-  phpmyadmin:
-    container_name: setup-phpmyadmin-basico
-    image: phpmyadmin:5.2
-    restart: always
-    ports:
-      - "8282:80"
-    environment:
-      PMA_HOST: setup-mysql-basico
-    depends_on:
-      - mysql
-    networks:
-      - setup-network
+  # phpmyadmin:
+  #   container_name: setup-phpmyadmin-basico
+  #   image: phpmyadmin:5.2
+  #   restart: always
+  #   ports:
+  #     - "8282:80"
+  #   environment:
+  #     PMA_HOST: setup-mysql-basico
+  #   depends_on:
+  #     - mysql
+  #   networks:
+  #     - setup-network
 networks:
   setup-network:
     driver: bridge
